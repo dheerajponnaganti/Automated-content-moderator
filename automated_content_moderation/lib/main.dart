@@ -79,7 +79,9 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
               ),
-              _image != null ? Image.file(_image) : Container(),
+              if (_image != null)
+                AspectRatio(aspectRatio: 1/1, child:
+                Image.file(_image)) ,
             ],
           ),
         ),
